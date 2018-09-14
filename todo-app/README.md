@@ -1,25 +1,39 @@
-# How to create your first Angular app
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 6.2.1.
+# Angular to-do app!
+Building Todo app using Angular CLI.
 
-Angular is a JavaScript framework, maintained by Google, it’s a MVC (Module view controller).
+![Todo-App](./img/TodoApp.png)
 
-## Table of contents
-• Adding an item (learn how to submit a form in Angular )
+This project was generated with:
+- [Node.js](https://nodejs.org/en/download/package-manager/) - Designed to build scalable network applications.
+- [Angular CLI](https://github.com/angular/angular-cli) - A command line interface for Angular.
+- [Bootstrap 4](http://getbootstrap.com/) - Build responsive, mobile-first projects on the web with the world's most popular front-end component library.
+- [Google-fonts](https://fonts.google.com/) - Making the web more beautiful, fast, and open through great typography.
+- [Material-icons](https://material.io/icons/) - Delightful, beautifully crafted symbols for common actions and items.
 
-## Development server
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+### Table of contents
+- [Adding an item](#adding-an-item) - learn how to submit a form in Angular
+- [Removing an item](#removing-an-item) - learn how to add an event in Angular
+- [Angular animation](#angular-animation) - learn how animate the components
 
-## Code scaffolding
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+#### Installation
+To run this project you will need to download it onto your local machine, navigate inside the folder and install all dependencies by entering the following command on your terminal window:
+```
+npm install
+```
+Finally to run the server enter the following command in your terminal window:
+```
+ng serve
+```
+Open [http://localhost:4200](http://localhost:4200) to view it in the browser. If you make any changes and save the changes process will automatically refresh and you will be able to see the results in the browser.
 
-## Build
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
+If you want to end the process hold `control` and press `c` in mac, if you are not using mac hold `ctrl` and press `c`.
 
-## Running unit tests
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+#### Adding an item
+![Todo-Add](./img/TodoStep1.png)
 
-## Running end-to-end tests
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
+#### Removing an item
+![Todo-Delete](./img/TodoStep2.png)
 
-## Further help
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+#### Angular animation
+
+[Return to create your first Angular app](../README.md)

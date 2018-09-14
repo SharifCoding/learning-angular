@@ -5,15 +5,25 @@
       <div class="input-group-prepend">
         <!-- To create a variable as an attribute, use # followed by the variable’s name. -->
         <input type="text" #todo class="form-control" placeholder="Add Todo" name="todo" ngModel>
-        <!-- Now get the “todo” variable value: -->
-        <p>{{todo.value}}</p>
         <!-- Add a click event to our button that pushes the value captured into “todoArray”. -->
-        <span class="input-group-text" (click)="addTodo(todo.value)">Add</span>
-        <div class="data">
-          <ul class="list-instyled">
-            <li *ngFor="let todo of todoArray">{{todo}}</li>
-          </ul>
-        </div>
+        <span class="input-group-text" (click)="addTodo(todo.value)">
+        <!-- put add icon inside "input-group-text" div -->
+        <i class="material-icons">add</i>
+        </span>
+      </div>
+      <br />
+        <!-- Now display the “todo” variable value: -->
+        <p>{{todo.value}}</p>
+        <!-- Fetch data stored in “todosArray” use *ngFor directive
+          to loop through the array and extract the data. -->
+      <div class="data">
+        <ul class="list-instyled">
+          <li *ngFor="let todo of todoArray">{{todo}}
+          <!-- Add a (click) event to delete icon and give it “todo” as parameter -->
+          <!-- and delete icon inside list item -->
+          <i (click)="deleteItem(todo)" class="material-icons">delete</i>
+        </li>
+        </ul>
       </div>
     </div>
   </form>

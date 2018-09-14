@@ -16,4 +16,11 @@ export class AppComponent {
     // Use console.log(this.todoArray) to see Array value.
     console.log(this.todoArray);
   }
+
+  // To add the delete functionality, we will use the “splice” array method and a for loop.
+  // We will loop through “todoArray” and extract the item we want to delete.
+  deleteItem() {
+    // Use console.log(this.todoArray) to see Array value.
+    console.log("delete item");
+  }
 }
