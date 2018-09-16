@@ -1,4 +1,4 @@
-# Angular to-do app!
+# Yet another Todo app
 Building Todo app using Angular CLI. Credit to [SaidHayani@](https://medium.freecodecamp.org/@saidhayani).
 
 ![Todo-App](./img/TodoApp.png)
@@ -70,10 +70,10 @@ Add a `(click)` event to delete icon and give it `todo` as parameter:
 ![Todo-Delete](./img/TodoStep2.png)
 
 #### Further Reading
-[*ngFor](https://angular.io/guide/structural-directives) - How Angular manipulates the DOM with structural directives.
-[NgModel](https://angular.io/api/forms/NgModel) - Creates a FormControl instance from a domain model and binds it to a form control element.
-[Array.prototype.splice( )](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/splice) - Method changes the contents of an array by removing existing elements and/or adding new elements.
-[Angular Forms Fundamental](https://angular.io/guide/forms) - Build an Angular form with a component and template.
-[ng-book](https://blog.ng-book.com/the-ultimate-guide-to-forms-in-angular-2/) - The Ultimate Guide to Forms in Angular.
+- [*ngFor](https://angular.io/guide/structural-directives) - How Angular manipulates the DOM with structural directives.
+- [NgModel](https://angular.io/api/forms/NgModel) - Creates a FormControl instance from a domain model and binds it to a form control element.
+- [Array.prototype.splice( )](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/splice) - Method changes the contents of an array by removing existing elements and/or adding new elements.
+- [Angular Forms Fundamental](https://angular.io/guide/forms) - Build an Angular form with a component and template.
+- [ng-book](https://blog.ng-book.com/the-ultimate-guide-to-forms-in-angular-2/) - The Ultimate Guide to Forms in Angular.
 
 [Return to create your first Angular app](../README.md)
