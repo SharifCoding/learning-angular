@@ -1,0 +1,26 @@
+[{
+	"id": 1,
+	"name": "Homer Simpson",
+	"email": "homer@simpson.com",
+	"birth": "May 12, 1956"
+}, {
+	"id": 2,
+	"name": "Marge Simpson",
+	"email": "marge@simpson.com",
+	"birth": "October 1, 1956"
+}, {
+	"id": 3,
+	"name": "Bart Simpson",
+	"email": "bart@simpson.com",
+	"birth": "April 1, 1979"
+}, {
+	"id": 4,
+	"name": "Lisa Simpson",
+	"email": "lisa@simpson.com",
+	"birth": "May 9, 1982"
+}, {
+	"id": 5,
+	"name": "Maggie Simpson",
+	"email": "maggie@simpson.com",
+	"birth": "January 12, 1989"
+}]

@@ -1,0 +1,15 @@
+{
+	"id": 3,
+	"name": "Bart Simpson",
+	"email": "bart@simpson.com",
+	"birth": "April 1, 1979",
+	"address": "742 Evergreen Terrace",
+	"city": "Springfield",
+	"state": "Springfield's State",
+	"country": "USA",
+	"organization": "Springfield Elementary School",
+	"jobProfile": "Student",
+	"additionalInfo1": "Ay Caramba!",
+	"additionalInfo2": "I'm Bart Simpson, who the hell are you?",
+	"additionalInfo3": "I didn't do it!"
+}

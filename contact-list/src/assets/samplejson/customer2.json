@@ -1,0 +1,15 @@
+{
+	"id": 2,
+	"name": "Marge Simpson",
+	"email": "marge@simpson.com",
+	"birth": "October 1, 1956",
+	"address": "742 Evergreen Terrace",
+	"city": "Springfield",
+	"state": "Springfield's State",
+	"country": "USA",
+	"organization": "742 Evergreen Terrace",
+	"jobProfile": "Housewife",
+	"additionalInfo1": "Hmmmm…",
+	"additionalInfo2": "Now it's Marge's time to shine!",
+	"additionalInfo3": "Oh!"
+}

@@ -1,0 +1,66 @@
+# ContactList
+Creating a simple Angular 6 App using Angular CLI that consists of, a customer list page which lists out all the customers, and a customer details page which will display the details for the selected customer.
+
+![contact-list](./contact-list.png)
+
+This project was generated with:
+- [Node.js](https://nodejs.org/en/download/package-manager/) - Designed to build scalable network applications.
+- [Angular CLI](https://github.com/angular/angular-cli) - A command line interface for Angular.
+- [Bootstrap 4](http://getbootstrap.com/) - Build responsive, mobile-first projects on the web with the world's most popular front-end component library.
+
+This App is a Simple Angular 6 App which uses:
+1. Angular Components
+2. HTTP Client
+3. Angular Routing
+4. Services
+5. Very Basic Bootstrap
+6. Communication from parent to child component
+
+### Table of contents
+- [Installation](#installation) - installing all dependencies
+- [Created Components](#created-components) - three components used in the setup of the app
+- [Created Services](#created-services) - get data from a rest API by making a HTTP request
+- [Model Classes](#model-classes) - define the structure containing all and each customer details
+- [Routing Module](#routing-module) - used to route between the 2 pages in the application
+
+#### Installation
+To run this project you will need to download it onto your local machine, navigate inside the folder and install all dependencies by entering the following command on your terminal window:
+```
+npm install
+```
+Finally to run the server enter the following command in your terminal window:
+```
+ng serve
+```
+Open [http://localhost:4200](http://localhost:4200) to view it in the browser. If you make any changes and save the changes process will automatically refresh and you will be able to see the results in the browser.
+
+If you want to end the process hold `control` and press `c` in mac, if you are not using mac hold `ctrl` and press `c`.
+
+#### Created Components
+
+- **CustomersComponent**: This Component Is to Display the List of Customers
+
+- **CustomerdetailsComponent**: This Component Displays the Details for a Single Selected Customer
+
+- **DisplayComponent**: This Component Displays the Customer name Clicked in the *CustomersComponent* ( The whole point for this component is to demonstrate parent to child component communication ). This is a child component of *CustomersComponent*
+
+#### Created Services
+
+- **DataService**: All the Jsons used in the application are stored in assets/samplejson folder. DataService Helps in getting the Json from the assets/samplejson folder Using a Http Request . In Real Applications , the Service Helps to Get the Data from a Rest API or any other API by making a HTTP Request
+
+#### Model Classes
+
+- **Customer**: This is the model class used for the *CustomersComponent* to define the structure of each customer in the list
+
+- **CustomerDetails**: This is the model class used for *CustomerdetailsComponent* to define the structure containing all the customer details
+
+#### Routing Module
+
+- **/customers**: This url displays the customer list and points to *CustomersComponent*
+
+- **/customerdetails/id**: This url displays the details for each customer and points to *CustomerdetailsComponent*
+
+#### Further Reading
+- [Angular Blog](https://blog.angular.io/) - News and Tips from the Angular Team.
+
+[Return to create your first Angular app](../README.md)

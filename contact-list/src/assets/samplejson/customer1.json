@@ -1,0 +1,15 @@
+{
+	"id": 1,
+	"name": "Homer Simpson",
+	"email": "homer@simpson.com",
+	"birth": "May 12, 1956",
+	"address": "742 Evergreen Terrace",
+	"city": "Springfield",
+	"state": "Springfield's State",
+	"country": "USA",
+	"organization": "Springfield Nuclear Power Plant",
+	"jobProfile": "Nuclear Safety Inspector",
+	"additionalInfo1": "D'oh!",
+	"additionalInfo2": "Why you little...!",
+	"additionalInfo3": "Woo hoo!"
+}
