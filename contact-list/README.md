@@ -61,6 +61,11 @@ If you want to end the process hold `control` and press `c` in mac, if you are n
 - **/customerdetails/id**: This url displays the details for each customer and points to *CustomerdetailsComponent*
 
 #### Further Reading
-- [Angular Blog](https://blog.angular.io/) - News and Tips from the Angular Team.
+- [Angular Components](https://angularfirebase.com/lessons/angular-components-basics-top-ten/) - Angular Components - Ten Basic Concepts.
+- [Angular HTTP Client](https://blog.angular-university.io/angular-http/) - Quick practical guide for the Angular HTTP Client module.
+- [Routing Made Easy](https://medium.com/coding-blocks/angular-6-routing-made-easy-part-1-f347c8a85947) - What if we have multiple paths in the same application?
+- [Modules and Services](https://medium.com/@michelestieven/organizing-angular-applications-f0510761d65a) - Understanding Modules and Services …and using them to better organize applications!
+- [Responsive Layouts](https://medium.com/@tomastrajan/how-to-build-responsive-layouts-with-bootstrap-4-and-angular-6-cfbb108d797b) - How To Build Responsive Layouts With Bootstrap 4 and Angular 6
+- [Parent to Child component](https://angularfirebase.com/lessons/sharing-data-between-angular-components-four-methods/) - Sharing Data Between Angular Components - Four Methods
 
 [Return to create your first Angular app](../README.md)

@@ -12,6 +12,7 @@ Angular uses TypeScript for implementing the logic, in which files end with `.ts
 - [First Angular app](./simple-angular-app/README.md)
 - [Yet another Todo app](./todo-app/README.md)
 - [Contact List](./contact-list/README.md)
+- [Fetch & Display data](./fetch-display/README.md)
 
 ### Further help
 To get more help on the Angular go check out the [angular.io](https://angular.io/).
