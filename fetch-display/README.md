@@ -1,7 +1,7 @@
 # FetchDisplay
 Our app will fetch data from a mock API service and display it in a beautiful UI. Credit to [Gary Simon](https://www.youtube.com/watch?v=z4JUm0Bq9AM).
 
-![contact-list](./contact-list.png)
+![fetch-posts](./img/fetchPosts.png)
 
 This project was generated with:
 - [Node.js](https://nodejs.org/en/download/package-manager/) - Designed to build scalable network applications.
@@ -9,10 +9,10 @@ This project was generated with:
 
 ### Table of contents
 - [Installation](#installation) - installing all dependencies
-- [The Angular 6 Module File](#the-angular-6-module-file)
-- [Components Tutorial](#components-tutorial)
-- [Templating](#templating)
-- [Routing Tutorial](#routing-tutorial)
+- [The Angular 6 Module File](#the-angular-6-module-file) - generating components taken care by CLI
+- [Components Tutorial](#components-tutorial) - basic building blocks of your Angular app
+- [Templating](#templating) - wrapping everything in a container & Material Icons setup
+- [Routing Tutorial](#routing-tutorial) - import components into the Routes array
 - [Services](#services)
 - [HTTP Client](#http-client)
 - [Fetching More Data from the API](#fetching-more-data-from-the-api)
@@ -146,6 +146,47 @@ Instead of <i>href</i>, we use <i>routerLink</i> to direct the user to different
 Importing material icons first, and then a Google web font called Montserrat.
 
 #### Routing Tutorial
+Visiting the <b>/src/app/app-routing.module.ts</b> file to make the 2 icons work when they're clicked:
+```ts
+import { NgModule } from '@angular/core';
+import { Routes, RouterModule } from '@angular/router';
+
+const routes: Routes = [];
+@NgModule({
+  imports: [RouterModule.forRoot(routes)],
+  exports: [RouterModule]
+})
+
+export class AppRoutingModule { }
+```
+We need to import our components and add them to the Routes array:
+```ts
+...
+import { UsersComponent } from './users/users.component';
+import { DetailsComponent } from './details/details.component';
+import { PostsComponent } from './posts/posts.component';
+
+const routes: Routes = [
+  {
+    path: '',
+    component: UsersComponent
+  },
+  {
+    path: 'details/:id',
+    component: DetailsComponent
+  },
+  {
+    component: PostsComponent
+  },
+];
+...
+```
+We've imported our 3 components (users, details, posts), and then defined three objects in the Routes array.
+- The first object specifies that the `UsersComponent` will be the default component that loads on the root path. We leave the path value `empty` for this.
+- The next route is for a user details section. We've specified a wildcard named `id`. We'll use this to fetch that value from the router in order to retrieve the correct user details.
+- Then another route for a component and path called `posts`.
+
+![fetch-users](./img/fetchUsers.png)
 
 #### Services
 
