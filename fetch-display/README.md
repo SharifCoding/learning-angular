@@ -309,7 +309,7 @@ export class DetailsComponent implements OnInit {
     this.route.params.subscribe( params => this.user$ = params.id );
   }
   ngOnInit() {
-    this.data.getUser(this.user$).subscribe(
+    this.data.getUser().subscribe(
       data => this.user$ = data
     );
   }
