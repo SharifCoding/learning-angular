@@ -1,7 +1,7 @@
 # FetchDisplay
 Our app will fetch data from a mock API service and display it in a beautiful UI. Credit to [Gary Simon](https://www.youtube.com/watch?v=z4JUm0Bq9AM).
 
-![fetch-api](./img/fetchAPI.png)
+![fetch-binding](./img/fetchBinding.png)
 
 This project was generated with:
 - [Node.js](https://nodejs.org/en/download/package-manager/) - Designed to build scalable network applications.
@@ -17,8 +17,8 @@ This project was generated with:
 - [Services](#services) - fetch a list of users from a public API
 - [HTTP Client](#http-client) - display users using the built in HTTPClient
 - [Fetching More Data from the API](#fetching-more-data-from-the-api) - display details and posts for each users
-- [Class Binding](#class-binding)
-- [Animation Tutorial](#animation-tutorial)
+- [Class Binding](#class-binding) - indicate which page a user is currently on in the sidebar
+- [Animation Tutorial](#animation-tutorial) - add fade-in when component loads
 
 #### Installation
 To run this project you will need to download it onto your local machine, navigate inside the folder and install all dependencies by entering the following command on your terminal window:
@@ -259,8 +259,7 @@ export class UsersComponent implements OnInit {
   }
 }
 ```
-In the constructor, we're creating an instance of our service. Then, within the lifecycle hook `ngOnInit()` (this runs when the component loads), we're calling our `getUsers()` method and subscribing to it. Inside, we're binding our `users$` object to the result returned by the API.
-Next, open up [/src/app/users/users.component.html](./src/app/users/users.component.html):
+In the constructor, we're creating an instance of our service. Then, within the lifecycle hook `ngOnInit()` (this runs when the component loads), we're calling our `getUsers()` method and subscribing to it. Inside, we're binding our `users$` object to the result returned by the API. Next, open up [/src/app/users/users.component.html](./src/app/users/users.component.html):
 ```html
 <h1>Users</h1>
 
@@ -288,8 +287,7 @@ getPosts() {
   return this.http.get('https://jsonplaceholder.typicode.com/posts')
 }
 ```
-The `getUser()` method will provide us with a single user's information, which will accept a userId as a parameter.
-`getPosts()` will fetch some fictional posts for us to get more muscle memory with this process of communicating with services. Visit [/src/app/details/details.component.ts](./src/app/details/details.component.ts):
+The `getUser()` method will provide us with a single user's information, which will accept a `userId` as a parameter. `getPosts()` will fetch some fictional posts for us (aprocess of communicating with services). Visit [/src/app/details/details.component.ts](./src/app/details/details.component.ts):
 ```ts
 import { Component, OnInit } from '@angular/core'; 
 import { DataService } from '../data.service';
@@ -315,9 +313,7 @@ export class DetailsComponent implements OnInit {
   }
 }
 ```
-This, as you see, is very similar to our users component. The only difference comes when we import `ActivatedRoute` and call it within the constructor.
-The purpose of this code allows us to grab the `id` router parameter that we defined in the app's routing file earlier. This will give us access to the user ID and then pass it to the getUser() method that we defined.
-Open up the [details.component.html](./src/app/details/details.component.html) and specify:
+This is very similar to the users component. The only difference, imported `ActivatedRoute` and called within the constructor. The purpose of this code is to grab the `id` router parameter defined in the app's routing file. Giving access to the user ID and then pass it to the `getUser()` method. Open up the [details.component.html](./src/app/details/details.component.html) and specify:
 ```html
 <h1>{{ user$.name }}</h1>
 <ul>
@@ -329,7 +325,7 @@ Open up the [details.component.html](./src/app/details/details.component.html) a
 
 ![fetch-details](./img/fetchDetails.png)
 
-For more muscle memory, let's repeat this process for the [/src/app/posts/posts.component.ts](./src/app/posts/posts.component.ts) file:
+Process repeated for the [/src/app/posts/posts.component.ts](./src/app/posts/posts.component.ts) file:
 ```ts
 import { Component, OnInit } from '@angular/core'; 
 import { DataService } from '../data.service'; 
@@ -364,8 +360,113 @@ And the [posts.component.html](./src/app/posts/posts.component.html) file:
 ![fetch-posts](./img/fetchPosts.png)
 
 #### Class Binding
+Now to indicate which page a user is currently on in the left sidebar, by adding a class to the icon that will make its' background blue.
+Visit the [/src/app/sidebar/sidebar.component.ts](./src/app/sidebar/sidebar.component.ts) file and add the following:
+```ts
+import { Component, OnInit } from '@angular/core'; 
+import { Router, NavigationEnd } from '@angular/router';
+
+...
+export class SidebarComponent implements OnInit {
+
+  currentUrl: string;
+
+  constructor(private router: Router) {
+    this.router.events.subscribe((path: NavigationEnd) => {
+      if(path.url){
+        this.currentUrl = path.url;
+      }
+    });
+  }
+
+  ngOnInit() {}
+  
+}
+```
+We're importing the Router and `NavigationEnd`, then defining a string property `currentUrl`. Then create an instance of the Router in order to subscribe to `router.events`. This will provide a string, which is the current router path.
+Open the [sidebar.component.html](./src/app/sidebar/sidebar.component.html) file and update it to match:
+```html
+<nav>
+  <ul>
+    <li>
+      <a routerLink="" [class.activated]="currentUrl == '/'"> <!-- update this line -->
+        <i class="material-icons">supervised_user_circle</i>
+      </a>
+    </li>
+    <li>
+      <a routerLink="posts" [class.activated]="currentUrl == '/posts'"> <!-- update this line -->
+        <i class="material-icons">message</i>
+      </a>
+    </li>
+  </ul>
+</nav>
+```
+Class binding works by binding `[class.csspropertyname]` to a template expression. It will only add the `.activated` CSS ruleset (defined in `styles.scss`) if our `currentUrl` is equal to either `/` or `/posts`.
+
+![fetch-binding](./img/fetchBinding.png)
 
 #### Animation Tutorial
+We can use Angular's animation library to help make the list of user's on the user's page to fade in when the component loads. First install the dependency:
+```bash
+> npm install @angular/animations@latest --save
+```
+Then add it to the imports of [/src/app/app.module.ts](./src/app/app.module.ts):
+```ts
+...
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+@NgModule({
+  ...
+  imports: [
+    ...
+    BrowserAnimationsModule
+  ],
+})
+```
+Next, open up [/src/app/users/users.component.ts](./src/app/users/users.component.ts) and add the following to the top imports:
+```ts
+import { trigger,style,transition,animate,keyframes,query,stagger } from '@angular/animations';
+```
+Then, in the component decorator, add the following animations property with the associated code:
+```ts
+@Component({
+  selector: 'app-users',
+  templateUrl: './users.component.html',
+  styleUrls: ['./users.component.scss'],
+  // Add this:
+  animations: [
+    trigger('listStagger', [
+      transition('* <=> *', [
+        query(
+          ':enter',
+          [
+            style({ opacity: 0, transform: 'translateY(-15px)' }),
+            stagger(
+              '50ms',
+              animate(
+                '550ms ease-out',
+                style({ opacity: 1, transform: 'translateY(0px)' })
+              )
+            )
+          ],
+          { optional: true }
+        ),
+        query(':leave', animate('50ms', style({ opacity: 0 })), {
+          optional: true
+        })
+      ])
+    ])
+  ]
+})
+```
+- We start off by defining an animation by giving it a trigger with a name `listStagger`.
+- Next, we use transition to define when the animations will take place, from one animation state to the other. A wildcard is used to say from any state to any state, in this case.
+- Then, we use query to say that on `:enter`, we apply an initial style that's hidden and moved on the Y axis by -15px, and make a stagger animation for each sequential element.
+- At the end, we define an optional `:leave` animation.
+
+To make this work, visit the [/src/app/users/users.component.html](./src/app/users/users.component.html) file and reference the animation trigger:
+```html
+<ul [@listStagger]="users$">
+```
 
 #### Further Reading
 - [Angular Components](https://angularfirebase.com/lessons/angular-components-basics-top-ten/) - Angular Components - Ten Basic Concepts.
