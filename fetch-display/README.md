@@ -1,7 +1,7 @@
 # FetchDisplay
 Our app will fetch data from a mock API service and display it in a beautiful UI. Credit to [Gary Simon](https://www.youtube.com/watch?v=z4JUm0Bq9AM).
 
-![fetch-binding](./img/fetchBinding.png)
+![fetch-main](./img/fetchMain.png)
 
 This project was generated with:
 - [Node.js](https://nodejs.org/en/download/package-manager/) - Designed to build scalable network applications.
@@ -469,6 +469,10 @@ To make this work, visit the [/src/app/users/users.component.html](./src/app/use
 ```
 
 #### Further Reading
-- [Angular Components](https://angularfirebase.com/lessons/angular-components-basics-top-ten/) - Angular Components - Ten Basic Concepts.
+- [RxJS](http://reactivex.io/rxjs/manual/overview.html#introduction) - Library for composing asynchronous and event-based programs by using observable sequences.
+- [Angular ng-template](https://blog.angular-university.io/angular-ng-template-ng-container-ngtemplateoutlet/) - The Complete Guide To Angular Templates.
+- [Intro to Routing in Angular](https://medium.com/@kevinrejko/intro-to-routing-in-angular-5-1f1ee595766e) - Refresh the page, save a bookmark, and share links.
+- [Binding in Angular](https://medium.com/@preethi.s/angular-custom-two-way-data-binding-3e618309d6c7) - Custom two way data binding.
+- [Angular Animations From Scratch](https://medium.com/codingthesmartway-com-blog/angular-6-animations-from-scratch-76e110cba5fb) - How to make use of the Angular Animations Module in your Angular 6 application.
 
 [Return to create your first Angular app](../README.md)
