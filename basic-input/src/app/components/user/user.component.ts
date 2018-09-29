@@ -26,7 +26,28 @@ export class UserComponent implements OnInit {
       city: 'Springfield',
       country: 'USA',
     }
-    this.hobbies = ['Eat Donuts', 'Eat Donuts', 'Eat Everything'];
+    this.hobbies = ['Eat Donuts', 'Eat More Donuts', 'Eat Everything'];
+  }
+
+  onClick(){
+    this.name = 'Merge Simpson';
+    this.hobbies.push('New Hobby');
+    console.log('onClick()');
+  }
+
+  addHoddy(hobby){
+    this.hobbies.unshift(hobby);
+    console.log('addHoddy(', hobby, ')');
+    return false;
+  }
+
+  removeHobby(hobby){
+    for(let i = 0; i < this.hobbies.length; i++){
+      if(this.hobbies[i] == hobby){
+        this.hobbies.splice(i, 1);
+        console.log('removeHobby(', hobby, ')');
+      }
+    }
   }
 }
 

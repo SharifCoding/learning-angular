@@ -1,7 +1,7 @@
 # BasicInput
 Angular framework to look at all the fundamentals including Angular CLI, components, services, types, directives, events, HTTP, routing and more. Credit to [Traversy Media](https://www.youtube.com/watch?v=KhzGSHNhnbI).
 
-![basic-component](./img/basic-component.png)
+![basic-binding](./img/basic-binding.png)
 
 This project was generated with:
 - [Node.js](https://nodejs.org/en/download/package-manager/) - Designed to build scalable network applications.
@@ -22,5 +22,7 @@ If you want to end the process hold `control` and press `c` in mac, if you are n
 
 #### Further Reading
 - [Angular CLI](https://github.com/angular/angular-cli/wiki) - The Angular CLI is a tool to initialize, develop, scaffold and maintain Angular applications.
+- [Interpolation and data-binding](https://docs.angularjs.org/guide/interpolation) - Interpolation markup with embedded expressions is used by AngularJS to provide data-binding to text nodes and attribute values.
+- [Angular ngFor](https://blog.angular-university.io/angular-2-ngfor/) - Learn all Features including trackBy, why is it not only for Arrays?
 
 [Return to create your first Angular app](../README.md)

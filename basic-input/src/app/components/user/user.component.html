@@ -6,3 +6,21 @@
   <li>{{ address.street }}, {{ address.city }}</li>
   <li>{{ address.country }}</li>
 </ul>
+
+<button (click)="onClick()">Click Me</button>
+
+<h1>Hobbies</h1>
+
+<form (submit)="addHoddy(hobby.value)">
+  <div>
+    <label for="hobby">Hobby:</label>
+    <input type="text" #hobby>
+  </div>
+</form>
+
+<ul>
+  <!-- <li *ngFor="let hobby of hobbies">{{ hobby }}</li> -->
+  <li *ngFor="let hobby of hobbies; let i = index">
+    {{ i + 1 }}: {{ hobby }} <button (click)="removeHobby(hobby)">X</button>
+  </li>
+</ul>
