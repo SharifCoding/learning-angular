@@ -1,7 +1,9 @@
 # BasicInput
-Angular framework to look at all the fundamentals including Angular CLI, components, services, types, directives, events, HTTP, routing and more. Credit to [Traversy Media](https://www.youtube.com/watch?v=KhzGSHNhnbI).
+Angular framework to look at all the fundamentals including Angular CLI, components, services, types, directives, events, HTTP, routing and more.
 
-![basic-ngmodel](./img/basic-ngmodel.png)
+Credit to [Traversy Media](https://www.youtube.com/watch?v=KhzGSHNhnbI).
+
+![basic-animate](./img/basic-animate.gif)
 
 This project was generated with:
 - [Node.js](https://nodejs.org/en/download/package-manager/) - Designed to build scalable network applications.
@@ -25,5 +27,9 @@ If you want to end the process hold `control` and press `c` in mac, if you are n
 - [Interpolation and data-binding](https://docs.angularjs.org/guide/interpolation) - Interpolation markup with embedded expressions is used by AngularJS to provide data-binding to text nodes and attribute values.
 - [Angular ngFor](https://blog.angular-university.io/angular-2-ngfor/) - Learn all Features including trackBy, why is it not only for Arrays?
 - [Angular Forms Guide](https://blog.angular-university.io/introduction-to-angular-2-forms-template-driven-vs-model-driven/) - How the Angular Forms API works and how it can be used to build complex forms. 
+- [Angular HTTP Client](https://blog.angular-university.io/angular-http/) - How to do HTTP in Angular in general.
+- [Comprehensive Guide to Higher-Order RxJs Mapping Operators](https://blog.angular-university.io/rxjs-higher-order-mapping/) - RxJs higher-order mapping operators: switchMap, mergeMap, concatMap and exhaustMap.
+- [ngIf directive](https://docs.angularjs.org/api/ng/directive/ngIf) - Removes or recreates a portion of the DOM tree based on an `{ expression }`.
+- [Angular Router Fundamentals](https://blog.angular-university.io/angular2-router/) - Child Routes, Auxiliary Routes, Master-Detail.
 
 [Return to create your first Angular app](../README.md)

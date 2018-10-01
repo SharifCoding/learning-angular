@@ -8,34 +8,37 @@
 </ul>
 
 <button (click)="onClick()">Click Me</button>
+<button (click)="toggleEdit()">Edit User</button>
 
-<h1>Edit User</h1>
-<form>
-  <div>
-    <label for="name">Name:</label>
-    <input type="text" [(ngModel)]="name" name="name">
-  </div>
-  <div>
-    <label for="age">Age:</label>
-    <input type="number" [(ngModel)]="age" name="age">
-  </div>
-  <div>
-    <label for="email">Email:</label>
-    <input type="text" [(ngModel)]="email" name="email">
-  </div>
-  <div>
-    <label for="street">Street:</label>
-    <input type="text" [(ngModel)]="address.street" name="street">
-  </div>
-  <div>
-    <label for="city">City:</label>
-    <input type="text" [(ngModel)]="address.city" name="city">
-  </div>
-  <div>
-    <label for="country">Country:</label>
-    <input type="text" [(ngModel)]="address.country" name="country">
-  </div>
-</form>
+<div *ngIf=isEdit>
+  <h1>Edit User</h1>
+  <form>
+    <div>
+      <label for="name">Name:</label>
+      <input type="text" [(ngModel)]="name" name="name">
+    </div>
+    <div>
+      <label for="age">Age:</label>
+      <input type="number" [(ngModel)]="age" name="age">
+    </div>
+    <div>
+      <label for="email">Email:</label>
+      <input type="text" [(ngModel)]="email" name="email">
+    </div>
+    <div>
+      <label for="street">Street:</label>
+      <input type="text" [(ngModel)]="address.street" name="street">
+    </div>
+    <div>
+      <label for="city">City:</label>
+      <input type="text" [(ngModel)]="address.city" name="city">
+    </div>
+    <div>
+      <label for="country">Country:</label>
+      <input type="text" [(ngModel)]="address.country" name="country">
+    </div>
+  </form>
+</div>
 
 <h1>Hobbies</h1>
 

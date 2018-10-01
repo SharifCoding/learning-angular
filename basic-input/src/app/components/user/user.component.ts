@@ -11,6 +11,7 @@ export class UserComponent implements OnInit {
   email: string;
   address: Address;
   hobbies: string[];
+  isEdit: boolean = false;
 
   constructor() {
     console.log('constructor ran...');
@@ -48,6 +49,10 @@ export class UserComponent implements OnInit {
         console.log('removeHobby(', hobby, ')');
       }
     }
+  }
+
+  toggleEdit(){
+    this.isEdit = !this.isEdit;
   }
 }
 
