@@ -5,7 +5,11 @@ export class AppPage {
     return browser.get('/');
   }
 
-  getParagraphText() {
-    return element(by.css('app-root h1')).getText();
+  getFirstParagraphText() {
+    return element.all(by.css('app-user h1')).first().getText();
+  }
+
+  getLastParagraphText() {
+    return element.all(by.css('app-user h1')).last().getText();
   }
 }

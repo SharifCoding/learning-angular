@@ -31,7 +31,7 @@ export class UserComponent implements OnInit {
   }
 
   onClick(){
-    this.name = 'Merge Simpson';
+    this.name = 'Marge Simpson';
     this.hobbies.push('New Hobby');
     console.log('onClick()');
   }

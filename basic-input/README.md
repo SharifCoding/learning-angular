@@ -14,13 +14,35 @@ To run this project you will need to download it onto your local machine, naviga
 ```
 npm install
 ```
-Finally to run the server enter the following command in your terminal window:
+To run the server enter the following command in your terminal window:
 ```
 ng serve -o
+```
+Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
+```
+ng e2e
 ```
 Open [http://localhost:4200](http://localhost:4200) to view it in the browser. If you make any changes and save the changes process will automatically refresh and you will be able to see the results in the browser.
 
 If you want to end the process hold `control` and press `c` in mac, if you are not using mac hold `ctrl` and press `c`.
+
+#### E2E Testing Result
+```bash
+Jasmine started
+
+  Initial check on Basic Input App
+    ✓ check correct HTML title appearing
+    ✓ should display the default user name
+    ✓ should display the h1 hobbies text
+
+  User functionality check on Basic Input App
+    ✓ should display the default user name
+    ✓ should display the editted user name
+
+Executed 5 of 5 specs SUCCESS in 6 secs.
+[19:38:47] I/launcher - 0 instance(s) of WebDriver still running
+[19:38:47] I/launcher - chrome #01 passed
+```
 
 #### Further Reading
 - [Angular CLI](https://github.com/angular/angular-cli/wiki) - The Angular CLI is a tool to initialize, develop, scaffold and maintain Angular applications.
