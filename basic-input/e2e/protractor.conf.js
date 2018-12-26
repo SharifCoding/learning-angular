@@ -12,8 +12,12 @@ exports.config = {
   suites: {
     // ng e2e --suite app
     app: './src/app.e2e-spec.ts',
-    // ng e2e --suite user
-    user: './src/user/user.e2e-spec.ts'
+    // ng e2e --suite userdetails
+    userdetails: './src/user/user-details.e2e-spec.ts',
+    // ng e2e --suite userhobbies
+    userhobbies: './src/user/user-hobbies.e2e-spec.ts',
+    // ng e2e --suite post
+    post: './src/post/post.e2e-spec.ts'
   },
   capabilities: {
     'browserName': 'chrome'
