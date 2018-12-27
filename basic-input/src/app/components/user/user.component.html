@@ -45,13 +45,13 @@
 <form (submit)="addHoddy(hobby.value)">
   <div>
     <label for="hobby">Hobby:</label>
-    <input type="text" #hobby>
+    <input type="text" name="hobby" #hobby>
   </div>
 </form>
 
-<ul>
+<ul class="hobbies">
   <!-- <li *ngFor="let hobby of hobbies">{{ hobby }}</li> -->
-  <li *ngFor="let hobby of hobbies; let i = index">
+  <li *ngFor="let hobby of hobbies; let i = index" class="hobby">
     {{ i + 1 }}: {{ hobby }} <button (click)="removeHobby(hobby)">X</button>
   </li>
 </ul>
