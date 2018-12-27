@@ -32,6 +32,10 @@ Finally to run the server enter the following command in your terminal window:
 ```
 ng serve
 ```
+Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
+```
+ng e2e
+```
 Open [http://localhost:4200](http://localhost:4200) to view it in the browser. If you make any changes and save the changes process will automatically refresh and you will be able to see the results in the browser.
 
 If you want to end the process hold `control` and press `c` in mac, if you are not using mac hold `ctrl` and press `c`.
@@ -59,6 +63,22 @@ If you want to end the process hold `control` and press `c` in mac, if you are n
 - **/customers**: This url displays the customer list and points to *CustomersComponent*
 
 - **/customerdetails/id**: This url displays the details for each customer and points to *CustomerdetailsComponent*
+
+#### E2E Testing Result
+```bash
+Jasmine started
+
+  contact-list app
+    ✓ use correct URL for Customer List Page
+    ✓ should display h1 welcome message
+    ✓ should display h2 heading title
+    ✓ should display three paragraphs
+    ✓ showing five card displays
+
+Executed 5 of 5 specs SUCCESS in 6 secs.
+[19:29:21] I/launcher - 0 instance(s) of WebDriver still running
+[19:29:21] I/launcher - chrome #01 passed
+```
 
 #### Further Reading
 - [Angular Components](https://angularfirebase.com/lessons/angular-components-basics-top-ten/) - Angular Components - Ten Basic Concepts.

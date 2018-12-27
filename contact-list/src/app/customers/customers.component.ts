@@ -27,7 +27,7 @@ export class CustomersComponent implements OnInit {
   }
 
   setSelectedCustomer( cust : string ): void {
-    this.selectedCustomer = cust ;
+    this.selectedCustomer = cust;
   }
 
   goToDetailsPage(id : number) : void {

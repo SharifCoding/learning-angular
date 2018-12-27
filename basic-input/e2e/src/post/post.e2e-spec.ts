@@ -1,5 +1,5 @@
 import { AppPage } from './post.po';
-import { browser, element, by } from 'protractor';
+import { browser } from 'protractor';
 
 describe('Post check on Basic Input App', () => {
   let page: AppPage;
