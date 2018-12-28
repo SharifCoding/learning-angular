@@ -1,7 +1,7 @@
 import { AppPage } from './app.po';
 import { browser } from 'protractor';
 
-describe('contact-list app', () => {
+describe('initial check on the contact-list app', () => {
   let page: AppPage;
 
   beforeEach(() => {
@@ -9,7 +9,7 @@ describe('contact-list app', () => {
     page.navigateTo();
   });
 
-  it('use correct URL for Customer List Page', () => {
+  it('use correct URL for customer list page', () => {
     expect(browser.getCurrentUrl()).toEqual(browser.baseUrl + '/customers');
   });
 

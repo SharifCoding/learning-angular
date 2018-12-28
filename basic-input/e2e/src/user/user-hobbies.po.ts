@@ -14,7 +14,7 @@ export class AppPage {
     return element.all(by.css('.hobbies li'))
   }
 
-  inputNewHobby(newHobby) {
+  inputNewHobby(newHobby: string) {
     let queryInput = element(by.css('[name="hobby"]'))
     return queryInput.clear().then(() => {
       queryInput.sendKeys(newHobby)
@@ -22,7 +22,7 @@ export class AppPage {
     })
   }
 
-  removeFirstHobby(hobbyNumber) {
+  removeFirstHobby(hobbyNumber: number) {
     return element.all(by.buttonText('X')).get(hobbyNumber).click();
   }
 }
