@@ -29,6 +29,10 @@ Finally to run the server enter the following command in your terminal window:
 ```
 ng serve -o
 ```
+Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
+```
+ng e2e
+```
 Open [http://localhost:4200](http://localhost:4200) to view it in the browser. If you make any changes and save the changes process will automatically refresh and you will be able to see the results in the browser.
 
 If you want to end the process hold `control` and press `c` in mac, if you are not using mac hold `ctrl` and press `c`.

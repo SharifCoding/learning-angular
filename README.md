@@ -15,6 +15,9 @@ Angular uses TypeScript for implementing the logic, in which files end with `.ts
 - [Yet another Todo app](./todo-app/README.md)
 - [Fetch & Display data](./fetch-display/README.md)
 
+### Testing with [Protractor](https://www.protractortest.org/#/)
+Projects also include Protractor an end-to-end test framework for Angular and AngularJS applications. Protractor runs tests against the application running in a real browser, interacting with it as a user would.
+
 ### Further help
 To get more help on the Angular go check out the [angular.io](https://angular.io/).
 
