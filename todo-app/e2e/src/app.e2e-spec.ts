@@ -1,14 +1,14 @@
 import { AppPage } from './app.po';
 
-describe('workspace-project App', () => {
+describe('Todo App', () => {
   let page: AppPage;
 
   beforeEach(() => {
     page = new AppPage();
   });
 
-  it('should display welcome message', () => {
+  it('should display Todo App message', () => {
     page.navigateTo();
-    expect(page.getParagraphText()).toEqual('Welcome to todo-app!');
+    expect(page.getParagraphText()).toEqual('Todo App');
   });
 });
