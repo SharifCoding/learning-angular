@@ -18,15 +18,26 @@ export class AppPage {
 
   getCorrectUrl(providedURL: string) {
     element(by.css('[href="' + providedURL + '"]')).click().then(() => {
-      browser.sleep(500);
-      browser.getAllWindowHandles().then((handles) => {
+      browser.driver.getAllWindowHandles().then((handles) => {
         let newWindowHandle = handles[1]; // new window
-        browser.switchTo().window(newWindowHandle).then(() => {
-          expect(browser.getCurrentUrl()).toMatch(providedURL);
+        browser.driver.switchTo().window(newWindowHandle).then(() => {
+          expect(browser.driver.getCurrentUrl()).toMatch(providedURL);
         });
         browser.driver.close();
         browser.driver.switchTo().window(handles[0]);
       });
     });
+  }
+
+  getFirstLinkText() {
+    return element.all(by.css('app-root li')).get(0).getText();
+  }
+
+  getSecondLinkText() {
+    return element.all(by.css('app-root li')).get(1).getText();
+  }
+
+  getThirdLinkText() {
+    return element.all(by.css('app-root li')).get(2).getText();
   }
 }

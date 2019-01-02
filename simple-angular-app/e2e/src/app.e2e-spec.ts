@@ -5,11 +5,9 @@ describe('simple-angular app', () => {
   let page: AppPage;
   let linkOne: string;
   let linkTwo: string;
-  let linkThree: string;
 
   linkOne = 'https://angular.io/tutorial';
   linkTwo = 'https://github.com/angular/angular-cli/wiki';
-  linkThree = 'https://blog.angular.io/';
 
   beforeEach(() => {
     page = new AppPage();
@@ -34,17 +32,18 @@ describe('simple-angular app', () => {
     page.navigateTo();
     page.getCorrectUrl(linkOne);
     expect(browser.getCurrentUrl()).toEqual(browser.baseUrl + '/');
+    expect(page.getFirstLinkText()).toMatch('Tour of Heroes');
   });
 
-  xit('link "CLI Documentation" redirect to the correct page', () => {
+  it('link "CLI Documentation" redirect to the correct page', () => {
     page.navigateTo();
     page.getCorrectUrl(linkTwo);
     expect(browser.getCurrentUrl()).toEqual(browser.baseUrl + '/');
+    expect(page.getSecondLinkText()).toMatch('CLI Documentation');
   });
 
-  xit('link "Angular blog" redirect to the correct page', () => {
+  it('should display link "Angular blog"', () => {
     page.navigateTo();
-    page.getCorrectUrl(linkThree);
-    expect(browser.getCurrentUrl()).toEqual(browser.baseUrl + '/');
+    expect(page.getThirdLinkText()).toContain('Angular blog');
   });
 });
