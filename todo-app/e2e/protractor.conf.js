@@ -5,9 +5,18 @@ const { SpecReporter } = require('jasmine-spec-reporter');
 
 exports.config = {
   allScriptsTimeout: 11000,
+  // ng e2e
   specs: [
     './src/**/*.e2e-spec.ts'
   ],
+  suites: {
+    // ng e2e --suite app
+    app: './src/app.e2e-spec.ts',
+    // ng e2e --suite add
+    add: './src/add/add.e2e-spec.ts',
+    // ng e2e --suite delete
+    delete: './src/delete/delete.e2e-spec.ts'
+  },
   capabilities: {
     'browserName': 'chrome'
   },

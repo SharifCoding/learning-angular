@@ -5,10 +5,22 @@ describe('Todo App', () => {
 
   beforeEach(() => {
     page = new AppPage();
+    page.navigateTo();
+  });
+
+  it('correct browser title', () => {
+    expect(page.getBrowserTitle()).toEqual('TodoApp');
   });
 
   it('should display Todo App message', () => {
-    page.navigateTo();
-    expect(page.getParagraphText()).toEqual('Todo App');
+    expect(page.getHeadingText()).toEqual('Todo App');
+  });
+
+  it('should display placeholder text Add Todo', () => {
+    expect(page.getFormText()).toEqual('Add Todo');
+  });
+
+  it('should display ADD material-icons', () => {
+    expect(page.checkAddIcon().isDisplayed()).toBeTruthy();
   });
 });

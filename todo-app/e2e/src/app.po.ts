@@ -5,7 +5,19 @@ export class AppPage {
     return browser.get('/');
   }
 
-  getParagraphText() {
+  getBrowserTitle() {
+    return browser.getTitle();
+  }
+
+  getHeadingText() {
     return element(by.css('app-root h1')).getText();
+  }
+
+  getFormText() {
+    return element(by.name('todo')).getAttribute('placeholder');
+  }
+
+  checkAddIcon() {
+    return element(by.cssContainingText('.material-icons', 'add'));
   }
 }
