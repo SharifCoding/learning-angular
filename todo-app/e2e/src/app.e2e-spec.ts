@@ -1,6 +1,6 @@
 import { AppPage } from './app.po';
 
-describe('Todo App', () => {
+describe('Todo App - Initial Check', () => {
   let page: AppPage;
 
   beforeEach(() => {

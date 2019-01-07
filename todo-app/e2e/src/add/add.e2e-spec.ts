@@ -1,6 +1,6 @@
 import { AppPage } from './add.po';
 
-describe('Todo App', () => {
+describe('Todo App - Add Functionality', () => {
   let page: AppPage;
   let todoArray = ['JavaScript', 'TypeScript'];
 
